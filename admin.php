@@ -1,5 +1,12 @@
 <?php
    session_start();
+   //$_SESSION['username']='administrator';
+   if ($_SESSION['username']=='administrator'){
+
+   }else{
+     header("Location: ./home.html");
+     exit();
+   }
 ?>
 
 <html>
