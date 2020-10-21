@@ -4,7 +4,10 @@
    if ($_SESSION['username']=='administrator'){
 
    }else{
-     header("Location: ./home.html");
+     header('HTTP/1.0 403 Forbidden');
+     echo ' 403 Forbidden<br>';
+     echo 'Redirecting to home page in 3 seconds';
+     header('refresh:3; url=./home.html');
      exit();
    }
 ?>
