@@ -5,18 +5,36 @@
 <?php
 	$email = $_POST["email"];
 	$pass = $_POST["password"];
-	$emailInDB = "SELECT Email FROM login WHERE Email = $email";
-	$passInDB ="SELECT Password FROM login WHERE Password = '$password'";
+	$emailInDB ="SELECT Email FROM login WHERE Email = $email";
+	$passInDB = "SELECT Password FROM login WHERE Password = $password";
+	$name = "SELECT Name from login WHERE Email = $email";
 	
-	if("select strcmp('$pass', '$passInDB')" == 0)
+	$sql = "select * from item";
+	$result = $conn->query($sql);
+						
+	if($result->num_rows>0)
 	{
-		echo "<script> alert('Login successful') </script>";
-		header("Location:home.html");
+		while($row = $result->fetch_assoc())
+		{
+			$row["Email", "Password", "Name"];
+			
+			if($email == $emailInDB && $pass == $passInDB)
+			{
+				echo "<script> alert('Login successful') </script>";
+				echo "<script> Welcome $name </script>";
+			}
+			else
+			{
+				echo "<script> alert('Invalid password!!! Please re-enter password') </script>";
+			}
+		}
 	}
 	else
 	{
-		echo "<script> alert('Invalid password!!! Please re-enter password') </script>";
+		echo "0 results";
 	}
+						
+	
 		
 	
 	mysqli_close($conn);
