@@ -40,7 +40,7 @@
 		<li><a href="history.php">History-quiz Games</a></li>
 		<li><a href="pre-school-games.php">Pre-school games</a></li>
 		<li><a href="adult.php">Adult educational Games</a></li>
-	</ul>
+	</ul>	
 	<br> <br> <br> <br> <br> <br>
 	<b><center> <h1> Online Educational Games </h1> <br>
 		<h2> Educational games for all ages </h2> 
