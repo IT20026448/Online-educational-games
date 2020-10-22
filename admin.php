@@ -1,6 +1,7 @@
 <?php
    session_start();
-   //$_SESSION['username']='administrator';
+   require 'config.php';
+   $_SESSION['username']='administrator';//for testing remove later
    if ($_SESSION['username']=='administrator'){
 
    }else{
@@ -17,7 +18,6 @@
 	<head>
 		<title>Online Educational Games</title>
 		<link rel="stylesheet" type="text/css" href="styles/contactusstyles.css">
-		<script src="js/contact.js"></script>
 	</head>
 	<body>
 		<div class="topbanner">
@@ -54,10 +54,31 @@
 		<li><a href="pre-school-games.html">Pre-school games</a></li>
 		<li><a href="adult.html">Adult educational Games</a></li>
 	</ul>
+<div class="content" style="margin-left: 220px;margin-top: 150px;">
+  <h1> Administrator Page</h1>
+  <p1 style="font-size: large;"><b>Manage games list</b></p1><br>
+  <p> Current list of games<p>
+  <p style="text-align:right;margin-right:200px;"> Edit List of games</p>
+  <script>
+  </script>
+  <div >
+    <ul style="display:block;align:left;">
+      <?php
+      $sql = "SELECT gameID, gName, description FROM Games";
+      $result = $conn->query($sql);
+      while ($row = mysqli_fetch_assoc($result)){
+        echo "<li style='display:block;width:40%;background-color:#f0f8ff;padding:14px;overflow-y:auto;border-bottom:1px solid black;'>Game ID: ". $row["gameID"]."<br> Name:" . $row['gName']."<br> description:". $row['description']."</li>";
+      }
+      ?>
+    </ul>
 
-<div class="content">
-<form></form>
+  </div>
 </div>
 
 </body>
+<br> <br> <hr border = "1" color = "black">
+<img src = "images/payment.jpg" style = "width:20%; margin-left: 210px">
+<a href="contactus.html" style = "margin-left: 35%;"> Contact Us | </a>
+<a> Privacy policy | </a>
+<a> Accessibility </a>
 </html>
