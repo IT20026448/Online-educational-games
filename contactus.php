@@ -46,7 +46,6 @@
 	<li><a href="pre-school-games.html">Pre-school games</a></li>
 	<li><a href="adult.html">Adult educational Games</a></li>
 </ul>
-
 <img class="supportImg" src="images/support.jpg" alt="support image">
 
 <form class="contactusform" id="contactusform" action="../php/message.php" method="get">
