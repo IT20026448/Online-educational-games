@@ -17,29 +17,31 @@
 <html>
 	<head>
 		<title>Online Educational Games</title>
-		<link rel="stylesheet" type="text/css" href="styles/contactusstyles.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/contactusstyles.css">
+		<script src="js/contact.js"></script>
 	</head>
 	<body>
 		<div class="topbanner">
 			<ul class="menu">
 				<img class="logo" src="images/logo.png" alt="Shopping Cart Image">
 
-				<a href="useraccount.html"> <img class="usericon" src="images/usericon.jpg" alt="UserIcon">	</a>
+				<a href="useraccount.php"> <img class="usericon" src="images/usericon.jpg" alt="UserIcon">	</a>
 				<div class="buttonicons">
-					<li class="home"><a href="home.html">
+					<li class="home"><a href="home.php">
 						<img onmouseout="this.setAttribute('src','images/homebutton.png')" onmouseover="this.setAttribute('src','images/homebuttonhover.png')" src="images/homebutton.png">
 					</a></li>
-					<li><a href="login.html">
+					<li><a href="login.php">
 						<img onmouseout="this.setAttribute('src','images/loginbutton.png')" onmouseover="this.setAttribute('src','images/loginbuttonhover.png')" src="images/loginbutton.png">
 					</a></li>
-					<li><a href="games.html">
+					<li><a href="games.php">
 						<img onmouseout="this.setAttribute('src','images/gamesbutton.png')" onmouseover="this.setAttribute('src','images/gamesbuttonhover.png')" src="images/gamesbutton.png">
 					</a></li>
-					<li><a href="contactus.html">
+					<li><a href="contactus.php">
 						<img onmouseout="this.setAttribute('src','images/contactusbutton.png')" onmouseover="this.setAttribute('src','images/contactusbuttonhover.png')" src="images/contactusbutton.png">
 					</a></li>
-					<li><a href="about.html">
-						<img	onmouseout="this.setAttribute('src','images/aboutbutton.png')" onmouseover="this.setAttribute('src','images/aboutbuttonhover.png')" src="images/aboutbutton.png">
+					<li><a href="about.php">
+						<img onmouseout="this.setAttribute('src','images/aboutbutton.png')" onmouseover="this.setAttribute('src','images/aboutbuttonhover.png')" src="images/aboutbutton.png">
 					</a></li>
 				</div>
 				<button class="search"type="button">Search</button>
@@ -47,14 +49,14 @@
 			</ul>
 		</div>
 	<ul class="verticalmenu">
-		<li><a href="maths.html">Math Games</a></li>
-		<li><a href="english.html">English Games</a></li>
-		<li><a href="scienceGames.html">Science Games</a></li>
-		<li><a href="history.html">History-quiz Games</a></li>
-		<li><a href="pre-school-games.html">Pre-school games</a></li>
-		<li><a href="adult.html">Adult educational Games</a></li>
+		<li><a href="maths.php">Math Games</a></li>
+		<li><a href="english.php">English Games</a></li>
+		<li><a href="scienceGames.php">Science Games</a></li>
+		<li><a href="history.php">History-quiz Games</a></li>
+		<li><a href="pre-school-games.php">Pre-school games</a></li>
+		<li><a href="adult.php">Adult educational Games</a></li>
 	</ul>
-<div class="content" style="margin-left: 220px;margin-top: 150px;">
+   <div class="content" style="margin-left: 220px;margin-top: 150px;">
   <h1> Administrator Page</h1>
   <p1 style="font-size: large;"><b>Manage games list</b></p1><br>
   <p> Current list of games<p>
