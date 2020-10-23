@@ -17,9 +17,8 @@
 <html>
 	<head>
 		<title>Online Educational Games</title>
-		<link rel="stylesheet" type="text/css" href="css/styles.css">
-		<link rel="stylesheet" type="text/css" href="css/contactusstyles.css">
-		<script src="js/contact.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles/styles.css">
+		<link rel="stylesheet" type="text/css" href="styles/contactusstyles.css">
 	</head>
 	<body>
 		<div class="topbanner">
