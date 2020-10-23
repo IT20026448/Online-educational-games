@@ -58,8 +58,8 @@
    <div class="content" style="margin-left: 220px;margin-top: 150px;">
   <h1> Administrator Page</h1>
   <p1 style="font-size: large;"><b>Manage games list</b></p1><br>
-  <p> Current list of games<p>
-  <p style="text-align:right;margin-right:200px;"> Edit List of games</p>
+  <p> Current list of games:<p>
+
   <script>
   </script>
   <div >
@@ -72,7 +72,21 @@
       }
       ?>
     </ul>
-
+    <p><b> Update an entry:</b></p>
+    <form action="adminUpdate.php" method="POST">
+      Select game id to change:<select name="gameID">
+      <?php
+      $sql = "SELECT gameID, gName, description FROM Games";
+      $result = $conn->query($sql);
+      while($row = mysqli_fetch_assoc($result)){
+        echo "<option value='".$row["gameID"]."'>".$row["gameID"]."</option>";
+      }
+      ?></select>
+      <br>
+      Enter New Name:<input type="text" name="name"><br>
+      Enter New Description:<input type="text" name="desc"><br>
+      <input type="submit">
+    </form>
   </div>
 </div>
 
