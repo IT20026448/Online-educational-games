@@ -5,14 +5,12 @@
     $gID= $_POST["gameID"];
     $gName = $_POST["name"];
     $gDesc = $_POST["desc"];
-    $sql1 = $conn->prepare("UPDATE Games SET gName=? , description=? WHERE gameID=?");
+    $sql1 = $conn->prepare("INSERT INTO Games (gameID, gName, description) VALUES(?,?,?)");
     if ($sql1 === false) {
       trigger_error($conn->error, E_USER_ERROR);
-      echo "<script>alert('statement error');</script>";
-      echo "<script>window.location.href='./admin.php';</script>";
       return;
     }
-    $sql1->bind_param("ssi",$gName,$gDesc,$gID);
+    $sql1->bind_param("iss",$gID,$gName,$gDesc);
     if ($sql1->execute() === TRUE){
       echo "<script>alert('updated successfully');</script>";
       echo "<script>window.location.href='./admin.php';</script>";
@@ -26,5 +24,4 @@
     echo "<script>alert('name or description not set');</script>";
     echo "<script>window.location.href='./admin.php';</script>";
   }
-
 ?>
