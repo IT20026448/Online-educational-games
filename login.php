@@ -1,4 +1,7 @@
 <?php
+	session_start();
+?>
+<?php
 	require 'config.php';
 ?>
 <!DOCTYPE html>
@@ -52,16 +55,18 @@
     </b>
    <br>
    <div id = "table" class = "formInput" class = "formText">
-			<form method = "POST" action ="submitLogin.php">
-			<br><label class = "formText"> Email </label> <br>
-				<input type = "text" id = "email" name = "email" class = "formInput" style = "width:300px;" placeholder = "name@domain.com" pattern = "[a-zA-Z0-0._+%-]+@[a-z0-9]+\.[a-z]{2,3}" required> <br> <br>
+			<?php
+				echo "<form method = 'POST' action ='submitLogin.php'>
+					<br><label class = 'formText'> Email </label> <br>
+					<input type = 'text' id = 'email' name = 'email' class = 'formInput' style = 'width:300px;' placeholder = 'name@domain.com' pattern = '[a-zA-Z0-9._+%-]+@[a-z0-9]+\.[a-z]{2,3}' required> <br> <br>
 				
-				<label class = "formText"> Password </label> <br>
-				<input type = "password" id = "pass" name = "password" class = "formInput" style = "width:300px;" placeholder = "Password"> <br> <br>
+					<label class = 'formText'> Password </label> <br>
+					<input type = 'password' id = 'pass' name = 'password' class = 'formInput' style = 'width:300px;' placeholder = 'Password'> <br> <br>
 			
-				<button input="submit" style = "width: 60%; margin-left: 20%" class = "formText"> Login </button> <br> <br>
-				<button style = "width: 60%; margin-left: 20%"class = "formInput"> <a href="register.php"> Create account </a> </button> <br> <br>
-			</form>
+					<button input='submit' style = 'width: 60%; margin-left: 20%' class = 'formText'> Login </button> <br> <br>
+					<button style = 'width: 60%; margin-left: 20%;' class = 'formInput'> <a href='register.php'> Create account </a> </button> <br> <br>
+				</form>";
+			?>
 	</div>
 	
 	</body>
